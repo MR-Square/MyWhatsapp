@@ -18,12 +18,14 @@ class Utils {
   /// Retrun [sizedbox] with width of [5%] of device width.
   ///
   /// You can also pass [precentage] you want.
-  static Widget horizontalSpace([double? wt]) => SizedBox(width: widthPer(wt));
+  static Widget horizontalSpace([double? wt = 5]) =>
+      SizedBox(width: widthPer(wt));
 
   /// Retrun [sizedbox] with height of [2%] of device height.
   ///
   /// You can also pass [precentage] you want.
-  static Widget verticalSpace([double? ht]) => SizedBox(height: heightPer(ht));
+  static Widget verticalSpace([double? ht = 2]) =>
+      SizedBox(height: heightPer(ht));
 
   /// Return [snackbar]. You need to pass two agruments [title] and [message].
   ///
