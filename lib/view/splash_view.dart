@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_whatsapp/view_model/services/splash_services.dart';
 
-class SplashScreen extends StatelessWidget {
-  SplashScreen({super.key}) {
+class SplashView extends StatelessWidget {
+  SplashView({super.key}) {
     SplashServices().timer();
   }
 

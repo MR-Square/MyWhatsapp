@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_whatsapp/view/home/home_view.dart';
+import 'package:my_whatsapp/res/routes/app_routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'MyWhatsapp',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      getPages: AppRoutes.appRoutes(),
     );
   }
 }
