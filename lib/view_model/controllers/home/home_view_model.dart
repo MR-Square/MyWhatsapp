@@ -1,14 +1,22 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:my_whatsapp/models/common/popup_menu_item_model.dart';
 
 class HomeViewModel extends GetxController {
+  // ================= RX VALUES =====================
+  RxInt currentIndex = 0.obs;
+
   // ================= LISTS =====================
-  final List<PopupMenuItemModel> homeMenuList = const [
-    PopupMenuItemModel(label: 'New group', value: 1),
-    PopupMenuItemModel(label: 'New broadcast', value: 2),
-    PopupMenuItemModel(label: 'Linked devices', value: 3),
-    PopupMenuItemModel(label: 'Starred messages', value: 4),
-    PopupMenuItemModel(label: 'Payments', value: 5),
-    PopupMenuItemModel(label: 'Settings', value: 6),
+
+  final List<Widget> pages = const [
+    Center(child: Text('first page')),
+    Center(child: Text('second page')),
+    Center(child: Text('third page')),
   ];
+
+  // ================= METHODS =====================
+
+  /// Method to change page:
+  void onPageChange(int index) {
+    currentIndex.value = index;
+  }
 }
